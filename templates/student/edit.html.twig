@@ -1,0 +1,6 @@
+<form method="post" action="{{ path('student_edit', {'id': student.id}) }}">
+    <input type="text" name="name" value="{{ student.name }}">
+    <!-- Ajoutez d'autres champs selon vos besoins -->
+
+    <input type="submit" value="Mettre à jour">
+</form>

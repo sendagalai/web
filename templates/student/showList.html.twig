@@ -1,0 +1,29 @@
+<style>
+    table, th, td {
+        border:1px solid black;
+    }
+</style>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Classroom</th>
+        <th>Action</th>
+    </tr>
+
+    {% for student in students %}
+        <tr>
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.classroom}}</td>
+            <td>
+                <a href="{{ path('student_edit', {'id': student.id}) }}">Update</a>
+                <a href="{{ path('student_delete', {'id': student.id}) }}">Remove</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
